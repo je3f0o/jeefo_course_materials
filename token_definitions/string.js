@@ -1,0 +1,76 @@
+/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+* File Name   : string_literal.js
+* Created at  : 2019-03-05
+* Updated at  : 2019-03-05
+* Author      : jeefo
+* Purpose     :
+* Description :
+* Reference   : https://www.ecma-international.org/ecma-262/5.1/#sec-7.8.4
+.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.*/
+// ignore:start
+"use strict";
+
+/* globals */
+/* exported */
+
+// ignore:end
+
+module.exports = {
+    id       : "String",
+    priority : 1,
+
+	is         : current_character => current_character === '"' || current_character === "'",
+    initialize : (token, current_character, streamer) => {
+        const start = streamer.get_cursor(),
+			  quote = current_character;
+
+        let length         = 1,
+            current_index  = start.index,
+            next_character = streamer.at(current_index + length);
+
+        while (next_character !== null) {
+            if (next_character === '\\') {
+                length += 1;
+                next_character = streamer.at(current_index + length);
+
+				// If windows OS
+				if (next_character === '\r') {
+					length += 1;
+	                next_character = streamer.at(current_index + length);
+				}
+
+                switch (next_character) {
+                    case '\n' :
+						streamer.move_cursor(length - 1);
+                        next_character = streamer.get_next_character();
+						current_index  = streamer.cursor.index;
+                        length = 0;
+                        break;
+                    case quote :
+                        length += 2;
+                        next_character = streamer.at(current_index + length);
+                        break;
+                    default :
+                        length += 1;
+                        next_character = streamer.at(current_index + length);
+                        break;
+                }
+
+            }
+
+            if (next_character === quote) {
+                break;
+            } else {
+                length += 1;
+                next_character = streamer.at(current_index + length);
+            }
+        }
+
+        streamer.move_cursor(length);
+
+        token.value = streamer.string.substring(start.index + 1, streamer.cursor.index);
+        token.quote = quote;
+        token.start = start;
+        token.end   = streamer.get_cursor();
+    }
+};
