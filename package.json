@@ -4,7 +4,7 @@
   "description": "",
   "main": "es5_tokenizer.js",
   "dependencies": {
-    "jeefo_tokenizer": "^0.0.35"
+    "jeefo_tokenizer": "0.0.36"
   },
   "devDependencies": {},
   "scripts": {
