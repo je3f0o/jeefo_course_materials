@@ -20,7 +20,8 @@ const JeefoTokenizer = require("jeefo_tokenizer");
 const es5_tokenizer = new JeefoTokenizer();
 
 es5_tokenizer.register(require("./token_definitions/comment.js"));
-es5_tokenizer.register(require("./token_definitions/string.js"));
+//es5_tokenizer.register(require("./token_definitions/string.js"));
+es5_tokenizer.register(require("./str.js"));
 es5_tokenizer.register(require("./token_definitions/number.js"));
 es5_tokenizer.register(require("./token_definitions/operator.js"));
 es5_tokenizer.register(require("./token_definitions/identifier.js"));
