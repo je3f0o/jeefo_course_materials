@@ -1,23 +1,5 @@
 {
-  "name": "ecma5",
-  "version": "1.0.0",
-  "description": "",
-  "main": "es5_tokenizer.js",
   "dependencies": {
-    "jeefo_tokenizer": "0.0.36"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/je3f0o/es5_parser_course_material.git"
-  },
-  "author": "je3f0o",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/je3f0o/es5_parser_course_material/issues"
-  },
-  "homepage": "https://github.com/je3f0o/es5_parser_course_material#readme"
+    "@jeefo/parser": "0.0.1"
+  }
 }
