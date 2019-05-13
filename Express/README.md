@@ -1,5 +1,5 @@
-# JeefoJavascript parser course materials for students
-Энэхүү материал нь зөвхөн сурагч нарт гэрийн даалгавар хийхэд зориулсан болно.
+# Express.js, Socket.io, jeefo-mysql
+Энэхүү project нь зөвхөн сурагч нарт хичээл заах үедээ бичсэн кодууд.
 
 ## Install
 Энэ прожектийг татаж аваад `package.json` файл байгаа хавтас дотроо орон доорхи 
