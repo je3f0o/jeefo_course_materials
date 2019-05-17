@@ -2,6 +2,7 @@
 ## Main topics 
 
 * Promise
+* Fetch API
 * Blob, File
 * formidable (upload multipart form handler)
 * Audio stream to the server (using MediaRecorder)
