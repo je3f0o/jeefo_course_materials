@@ -5,7 +5,8 @@
     "compression": "^1.7.4",
     "express": "^4.16.4",
     "formidable": "^1.2.1",
-    "response-time": "^2.3.2"
+    "response-time": "^2.3.2",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "morgan": "^1.9.1"
