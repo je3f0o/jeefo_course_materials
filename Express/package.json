@@ -11,7 +11,7 @@
     "jeefo-mysql": "0.0.23",
     "jsonwebtoken": "^8.5.1",
     "response-time": "^2.3.2",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.4.0"
   },
   "devDependencies": {
     "morgan": "^1.9.1"
