@@ -9,7 +9,7 @@
     "express": "^4.16.4",
     "formidable": "^1.2.1",
     "jeefo-mysql": "0.0.23",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "response-time": "^2.3.2",
     "socket.io": "^2.2.0"
   },
